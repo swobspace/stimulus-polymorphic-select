@@ -1,0 +1,13 @@
+{
+  "name": "@swobspace/stimulus-polymorphic-select",
+  "version": "1.0.0",
+  "description": "A stimulus controller for polymorphic selects in github:swobspace/wobauth",
+  "main": "stimulus-polymorphic-select.js",
+  "repository": "git@github.com:swobspace/stimulus-polymorphic-select.git",
+  "author": "Wolfgang Barth <wob@swobspace.net>",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "stimulus": "^3.0.1"
+  }
+}
