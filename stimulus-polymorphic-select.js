@@ -7,7 +7,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("poly#connect")
     this.updateSelectOptions()
   }
 
@@ -16,18 +15,15 @@ export default class extends Controller {
   }
 
   selectValue() {
-    console.log(`poly#selectValue:: ${this.primaryTarget.selectedOptions[0].value}`)
     return this.primaryTarget.selectedOptions[0].value
   }
 
   selectUrl() {
-    console.log(`poly#selectUrl:: ${this.primaryTarget.selectedOptions[0].getAttribute('data-url')}`)
     return this.primaryTarget.selectedOptions[0].getAttribute('data-url')
   }
 
   updateSelectOptions() {
     if (this.selectUrl() != undefined ) {
-      console.log("poly#updateSelectOptions:: show secondary")
       this.secondaryTarget.parentElement.parentElement.hidden = false
       fetch(`${this.selectUrl()}?${this.params()}`, {
         headers: {
@@ -38,7 +34,6 @@ export default class extends Controller {
       .then(html => Turbo.renderStreamMessage(html))
     } else {
     // hide select 
-      console.log("poly#updateSelectOptions:: hide secondary")
       this.secondaryTarget.parentElement.parentElement.hidden = true
     }
   }
