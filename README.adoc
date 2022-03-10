@@ -1,0 +1,11 @@
+= stimulus-polymorphic-select
+
+A stimulus controller for polymorphic selects in 
+https://github.com/swobspace/wobauth[github:swobspace/wobauth]. Its specific to this rails engine.
+
+== Installation
+
+[source,sh]
+----
+yarn add https://github.com/swobspace/stimulus-polymorphic-select.git
+----
