@@ -25,6 +25,8 @@ export default class extends Controller {
   updateSelectOptions() {
     if (this.selectUrl() != undefined ) {
       this.secondaryTarget.parentElement.parentElement.hidden = false
+      // clear secondary Target option list before add new options
+      this.secondaryTarget.options.length = 0;
       fetch(`${this.selectUrl()}?${this.params()}`, {
         headers: {
           Accept: "text/vnd.turbo-stream.html"
